@@ -5,7 +5,8 @@ body {
   font-family: 'Inter', 'Geist', 'Roboto', 'JetBrains Mono', sans-serif;
   /* background-color: #f1f5f9; */
   color: #1e293b; /* dark */
-  background-color: yellow;
+  /* background-color: yellow; */
+  background-color: var(--color-gray-100);
   top: 0;
 
   /* dark mode */

@@ -4,7 +4,7 @@ export const FooterComp = () => {
   return (html`
     <div
       id="footer"
-      class="bg-cyan-50 flex flex-col text-black min-h-[35vh]"
+      class="bg-gray-100 flex flex-col text-black min-h-[35vh]"
     >
       <div
         class="border-b-2 border-black flex flex-row justify-between w-4/5 mx-auto py-16"
