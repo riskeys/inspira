@@ -166,8 +166,50 @@ export const ProductSectionTwoComp = (req: {
   return `${detail1}${detail2}`;
 };
 
-// <button
-//   class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 hover:cursor-pointer transition"
-// >
-//   Book Now
-// </button>
+export const ProductCounseling = (status: boolean) => {
+  return product({
+    title: "Layanan Konseling",
+    titleAlt: "(Counseling)",
+    description:
+      " Melalui pendekatan yang empatik dan profesional, kami dapat membantu klien menemukan solusi terbaik sesuai potensi dan kebutuhan.",
+    active: status,
+    section: 1,
+    order: 1,
+  });
+};
+
+export const ProductPsychotheraphyy = (status: boolean) => {
+  return product({
+    title: "Layanan Psikoterapi",
+    titleAlt: "(Psychotherapy)",
+    description:
+      "Dengan menggunakan berbagai teknik psikoterapi, kami dapat membimbing klien untuk memahami diri, mengelola stres, serta meningkatkan kualitas hidup dan kesejahteraan mental.",
+    active: status,
+    section: 1,
+    order: 2,
+  });
+};
+
+export const ProductTraining = (status: boolean) => {
+  return product({
+    title: "Layanan Pelatihan",
+    titleAlt: "(Training)",
+    description:
+      "Kami memberikan pelatihan yang interaktif dan aplikatif, membantu peserta dapat mengembangkan kompetensi diri, memperbaiki kinerja, serta mempersiapkan diri menghadapi tantangan di dunia kerja maupun kehidupan sehari-hari.",
+    active: status,
+    section: 2,
+    order: 1,
+  });
+};
+
+export const ProductAssessment = (status: boolean) => {
+  return product({
+    title: "Layanan Penilaian",
+    titleAlt: "(Assessment)",
+    description:
+      "Assessment digunakan untuk memahami potensi, kepribadian, minat, serta memberikan rekomendasi yang tepat dalam pengembangan diri atau penanganan masalah.",
+    active: status,
+    section: 2,
+    order: 2,
+  });
+};

@@ -1,7 +1,11 @@
 import { valibot } from "../../../lib/deps.ts";
 import {
+  ProductAssessment,
+  ProductCounseling,
+  ProductPsychotheraphyy,
   ProductSectionOneComp,
   ProductSectionTwoComp,
+  ProductTraining,
 } from "../../../views/component/landing/product.ts";
 
 export class LandingProductToggleUsecase {
@@ -39,23 +43,43 @@ export class LandingProductToggleUsecase {
 
   private getSectionOne(req: { order: number; expand: boolean }) {
     const { order, expand } = req;
-    const comp = ProductSectionOneComp({
-      sectionOne: order == 1 && expand,
-      sectionTwo: order == 2 && expand,
-      sectionThree: order == 3 && expand,
-    });
+    // const comp = ProductSectionOneComp({
+    //   sectionOne: order == 1 && expand,
+    //   sectionTwo: order == 2 && expand,
+    //   sectionThree: order == 3 && expand,
+    // });
+    //
+    // return comp;
 
-    return comp;
+    if (order == 1) {
+      return ProductCounseling(expand);
+    }
+
+    if (order == 2) {
+      return ProductPsychotheraphyy(expand);
+    }
+
+    return "";
   }
 
   private getSectionTwo(req: { order: number; expand: boolean }) {
     const { order, expand } = req;
-    const comp = ProductSectionTwoComp({
-      sectionOne: order == 1 && expand,
-      sectionTwo: order == 2 && expand,
-      sectionThree: order == 3 && expand,
-    });
+    // const comp = ProductSectionTwoComp({
+    //   sectionOne: order == 1 && expand,
+    //   sectionTwo: order == 2 && expand,
+    //   sectionThree: order == 3 && expand,
+    // });
+    //
+    // return comp;
 
-    return comp;
+    if (order == 1) {
+      return ProductTraining(expand);
+    }
+
+    if (order == 2) {
+      return ProductAssessment(expand);
+    }
+
+    return "";
   }
 }
