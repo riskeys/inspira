@@ -7,6 +7,7 @@ import { ProductSectionComp } from "../views/component/landing/product.ts";
 import { LandingProductToggleUsecase } from "../apps/usecases/landing/product.toggle.usecase.ts";
 import { FooterComp } from "../views/component/landing/footer.ts";
 import { LandingAboutUsComp } from "../views/component/landing/about.ts";
+import { OurClientComp } from "../views/component/landing/ourclient.ts";
 
 export const home = (c: Context) => {
   const logger = c.get("logger");
@@ -17,10 +18,12 @@ export const home = (c: Context) => {
   const hero = HeroComp();
   const product = ProductSectionComp();
   const about = LandingAboutUsComp();
+  const ourClients = OurClientComp();
   const footer = FooterComp();
   const page = newBasePage({
     navbar: render(navbar),
-    content: render(hero) + render(product) + render(about),
+    content: render(hero) + render(product) + render(ourClients) +
+      render(about),
     footer: render(footer),
   });
   return c.html(page);
