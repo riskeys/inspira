@@ -20,63 +20,55 @@ export const OurClientComp = () => {
           perorangan untuk berbagai kebutuhan.
         </p>
       </div>
-      <div class="w-5/6 mx-auto flex flex-col py-10">
-        <div class="flex flex-row justify-between">
+      <div id="client-logos" class="w-5/6 mx-auto flex flex-col py-10 gap-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           <img
             src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
           />
           <img
             src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
           />
           <img
             src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
           />
           <img
             src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
-          />
-        </div>
-      </div>
-      <div class="w-5/6 mx-auto flex flex-col py-10">
-        <div class="flex flex-row justify-between">
-          <img
-            src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
           />
           <img
             src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
           />
           <img
             src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
           />
           <img
             src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
-          />
-        </div>
-      </div>
-      <div class="w-5/6 mx-auto flex flex-col py-10">
-        <div class="flex flex-row justify-between">
-          <img
-            src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
           />
           <img
             src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
           />
           <img
             src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
           />
           <img
             src="/assets/images/Iyas.jpeg"
-            class="h-40 w-40 object-cover object-center"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
+          />
+          <img
+            src="/assets/images/Iyas.jpeg"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
+          />
+          <img
+            src="/assets/images/Iyas.jpeg"
+            class="h-32 w-32 md:h-40 md:w-40 object-cover object-center rounded-lg"
           />
         </div>
       </div>

@@ -29,8 +29,6 @@ export class LandingProductToggleUsecase {
       req,
     );
 
-    console.log(section, order, expand);
-
     if (section == 1) {
       return this.getSectionOne({ order, expand });
     }
