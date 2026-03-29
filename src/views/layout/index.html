@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ title }}</title>
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+		<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+		<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Belleza&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Pinyon+Script&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+		<!-- <link href="/css/style.css" rel="stylesheet"> -->
+		<link href="/css/index.css" rel="stylesheet">
+		<script src="/js/htmx.min.js"></script>
+		<script src="/js/htmx.ext.responsetargets.min.js"></script>
+		<script>
+			document.addEventListener('htmx:configRequest', function(evt) {
+					const requestType = evt.detail.verb;
+					const ctrlKey = evt.detail.triggeringEvent?.ctrlKey;
+					const pushUrl = evt.target.attributes['hx-push-url']?.value;
+					const href = evt.target.attributes['hx-get']?.value;
+
+					if (requestType === 'get' && ctrlKey && pushUrl) {
+							evt.preventDefault(); // Cancel the htmx request
+							window.open(href, '_blank'); // Open in a new tab
+					}
+			});
+		</script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            
+            const spans = hamburger.querySelectorAll("span");
+            spans[0].classList.toggle("rotate-45");
+            spans[0].classList.toggle("translate-y-2");
+            spans[1].classList.toggle("opacity-0");
+            spans[2].classList.toggle("-rotate-45");
+            spans[2].classList.toggle("-translate-y-2");
+          });
+        }
+      });
+    </script>
+
+	<script>
+		document.addEventListener("htmx:confirm", function(e) {
+
+		// The event is triggered on every trigger for a request, so we need to check if the element
+		// that triggered the request has a confirm question set via the hx-confirm attribute,
+		// if not we can return early and let the default behavior happen
+		if (!e.detail.question) return
+
+		// This will prevent the request from being issued to later manually issue it
+		e.preventDefault()
+
+		const triggeringElement = e.target;
+
+		// Fetch the toast confirm component
+		fetch(`/toast-confirm?msg=${encodeURIComponent(e.detail.question)}`)
+			.then(response => response.text())
+			.then(html => {
+				const toastElement = document.querySelector('#toast');
+				if (toastElement) {
+					toastElement.outerHTML = html;
+				}
+
+				// Add event listener for the Yes button
+				const yesBtn = document.getElementById('toast-confirm-yes');
+				if (yesBtn) {
+					yesBtn.addEventListener('click', function() {
+						// Re-issue the original HTMX request
+						e.detail.issueRequest(true);
+					});
+				}
+			})
+			.catch(err => console.error('Toast confirm error:', err))
+		})
+	</script>
+	</head>
+	<body hx-ext="response-targets">
+		{{ content }}
+		<output id="toast"></output>
+	</body>
+
+      <script>
+      const canvas = document.getElementById('hero-canvas');
+      const ctx = canvas.getContext('2d');
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight * 0.9;
+
+      function drawHexagon(x, y, size, color) {
+        ctx.strokeStyle = color;
+        ctx.beginPath();
+        for (let i = 0; i < 6; i++) {
+          const angle = (i * Math.PI) / 3;
+          const hx = x + size * Math.cos(angle);
+          const hy = y + size * Math.sin(angle);
+          if (i === 0) ctx.moveTo(hx, hy);
+          else ctx.lineTo(hx, hy);
+        }
+        ctx.closePath();
+        ctx.stroke();
+      }
+
+      const hexSize = canvas.height * 0.35;
+      const centerY = canvas.height / 2;
+
+      // drawHexagon(canvas.width * 0.60, centerY + hexSize * 0.5, hexSize, '#3B82F6');
+      // drawHexagon(canvas.width * 0.80, centerY - hexSize * 0.2, hexSize, '#8B5CF6');
+
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight * 0.9;
+        const hexSize = canvas.height * 0.35;
+        const centerY = canvas.height / 2;
+        // drawHexagon(canvas.width * 0.15, centerY + hexSize * 0.2, hexSize, '#3B82F6');
+        // drawHexagon(canvas.width * 0.35, centerY - hexSize * 0.2, hexSize, '#8B5CF6');
+      });
+      </script>
+</html>
