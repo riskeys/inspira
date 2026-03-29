@@ -19,12 +19,15 @@ export const basePage = async (
 };
 
 export const newBasePage = async (
-  req: { navbar: string; content: string },
+  req: { navbar: string; content: string; footer: string },
 ) => {
   const mainContent = contentBaseView2({
     navbar: req.navbar,
     content: req.content,
+    footer: req.footer,
   });
+
+  console.log("footer", req.footer);
 
   return await baseLayout(mainContent);
 };

@@ -40,10 +40,28 @@ export const Navbar = () => {
           >
             <a href="/">Self Test</a>
           </div>
-          <div
-            class="cursor-pointer hover:text-[#f9dbbd] hover:bg-[#a53860] transition px-4 py-2 rounded"
-          >
-            <a href="/">Diagnostic</a>
+          <div class="relative group">
+            <div
+              class="cursor-pointer hover:text-[#f9dbbd] hover:bg-[#a53860] transition px-4 py-2 rounded"
+            >
+              <a href="/">Diagnostic</a>
+            </div>
+            <div
+              class="hidden group-hover:flex flex-col absolute top-full left-0 bg-white border border-gray-200 rounded shadow-lg z-50"
+            >
+              <a
+                href="/diagnostic/general"
+                class="px-4 py-2 hover:bg-gray-100 transition whitespace-nowrap"
+              >General Checkup</a>
+              <a
+                href="/diagnostic/advanced"
+                class="px-4 py-2 hover:bg-gray-100 transition whitespace-nowrap"
+              >Advanced Testing</a>
+              <a
+                href="/diagnostic/reports"
+                class="px-4 py-2 hover:bg-gray-100 transition whitespace-nowrap"
+              >View Reports</a>
+            </div>
           </div>
           <div
             class="cursor-pointer hover:text-[#f9dbbd] hover:bg-[#a53860] transition px-4 py-2 rounded"
@@ -69,7 +87,7 @@ export const Navbar = () => {
       <!-- Mobile Menu (Drawer) -->
       <div
         id="mobile-menu"
-        class="hidden fixed md:hidden inset-0 top-20 flex-col bg-[#f1f5f9] border-t border-gray-200 z-40 transition-all duration-200"
+        class="hidden fixed md:hidden inset-0 top-15 flex-col bg-[#f1f5f9] border-t border-gray-200 z-40 transition-all duration-200"
       >
         <div class="flex flex-col uppercase text-base">
           <div
@@ -82,10 +100,28 @@ export const Navbar = () => {
           >
             <a href="/">Self Test</a>
           </div>
-          <div
-            class="cursor-pointer hover:bg-gray-100 transition px-6 py-3 border-b"
-          >
-            <a href="/">Diagnostic</a>
+          <div class="border-b">
+            <div
+              class="cursor-pointer hover:bg-gray-100 transition px-6 py-3 flex justify-between items-center"
+              id="diagnostic-toggle"
+            >
+              <a href="/">Diagnostic</a>
+              <span id="diagnostic-arrow">+</span>
+            </div>
+            <div id="diagnostic-submenu" class="hidden bg-gray-50 flex flex-col">
+              <a
+                href="/diagnostic/general"
+                class="px-10 py-2 hover:bg-gray-200 transition"
+              >General Checkup</a>
+              <a
+                href="/diagnostic/advanced"
+                class="px-10 py-2 hover:bg-gray-200 transition"
+              >Advanced Testing</a>
+              <a
+                href="/diagnostic/reports"
+                class="px-10 py-2 hover:bg-gray-200 transition"
+              >View Reports</a>
+            </div>
           </div>
           <div
             class="cursor-pointer hover:bg-gray-100 transition px-6 py-3 border-b"

@@ -10,7 +10,7 @@ export const ProductSectionComp = () => {
   const comp = html`
     <div
       id="products"
-      class="w-full bg-purple-100 py-8 md:py-12 lg:py-16 min-h-[90vh]"
+      class="w-full bg-purple-100 py-8 md:py-12 lg:py-16 min-h-[85vh]"
     >
       <div class="px-4 md:px-6 lg:px-8">
         <div
@@ -70,10 +70,10 @@ const product = (content: {
       id="product-${content.section}-${content.order}"
       class="clickable px-4 md:px-6 py-4 md:py-6 bg-white hover:bg-purple-50 cursor-pointer transition-all duration-1000 ease-in-out rounded-lg md:rounded-xl"
       hx-swap-oob="true"
-      hx-get="/product/${content.section}/${content.order}/${!content.active}"
     >
       <div
         class="flex flex-row justify-between items-center py-3 md:py-4 border-b-2"
+        hx-get="/product/${content.section}/${content.order}/${!content.active}"
       >
         <h2
           class="flex flex-col md:inline-block text-lg md:text-xl lg:text-2xl font-semibold"
@@ -93,6 +93,8 @@ const product = (content: {
         ${content.description}
         <a
           class="flex flex-row justify-between px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl bg-[#a53860] text-[#f9dbbd] hover:text-[#a53860] hover:bg-[#f9dbbd] text-sm md:text-base lg:text-lg font-normal transition cursor-pointer opacity-100 w-full"
+          href="https://facebook.com"
+          target="_blank"
         >
           <span> Lihat lebih lanjut </span>
           <span>></span>

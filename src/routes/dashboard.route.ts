@@ -4,7 +4,6 @@ import {
   product,
   transactions,
 } from "../controllers/dashboard.controller.ts";
-import { checkSess } from "../middlewares/auth/auth.ts";
 import {
   ToastComp,
   ToastConfirmComp,

@@ -1,7 +1,6 @@
 import { valibot } from "../../../lib/deps.ts";
 import {
   ProductSectionOneComp,
-  ProductSectionOneInnerComp,
   ProductSectionTwoComp,
 } from "../../../views/component/landing/product.ts";
 

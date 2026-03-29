@@ -26,6 +26,7 @@ export const contentBaseView = (
 export const contentBaseView2 = (req: {
   navbar: string;
   content: string;
+  footer: string;
 }) => {
-  return `${req.navbar} ${req.content}`;
+  return `${req.navbar} ${req.content} ${req.footer}`;
 };

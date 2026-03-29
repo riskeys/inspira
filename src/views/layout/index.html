@@ -28,12 +28,17 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+
         const hamburger = document.getElementById("hamburger");
         const mobileMenu = document.getElementById("mobile-menu");
+        const diagnosticToggle = document.getElementById("diagnostic-toggle");
+        const diagnosticSubmenu = document.getElementById("diagnostic-submenu");
+        const diagnosticArrow = document.getElementById("diagnostic-arrow");
 
         if (hamburger && mobileMenu) {
           hamburger.addEventListener("click", () => {
             mobileMenu.classList.toggle("hidden");
+            mobileMenu.classList.toggle("flex");
             
             const spans = hamburger.querySelectorAll("span");
             spans[0].classList.toggle("rotate-45");
@@ -41,6 +46,14 @@
             spans[1].classList.toggle("opacity-0");
             spans[2].classList.toggle("-rotate-45");
             spans[2].classList.toggle("-translate-y-2");
+          });
+        }
+
+        if (diagnosticToggle && diagnosticSubmenu) {
+          diagnosticToggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            diagnosticSubmenu.classList.toggle("hidden");
+            diagnosticArrow.textContent = diagnosticSubmenu.classList.contains("hidden") ? "+" : "−";
           });
         }
       });
