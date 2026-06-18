@@ -40,6 +40,7 @@
     "npm:esbuild-wasm@~0.25.11": "0.25.12",
     "npm:esbuild@0.25.7": "0.25.7",
     "npm:esbuild@~0.25.5": "0.25.12",
+    "npm:lucide-preact@^1.21.0": "1.21.0_preact@10.29.2",
     "npm:preact-render-to-string@^6.6.3": "6.7.0_preact@10.29.2",
     "npm:preact@^10.28.2": "10.29.2",
     "npm:preact@^10.29.1": "10.29.2",
@@ -1338,6 +1339,12 @@
         "yallist"
       ]
     },
+    "lucide-preact@1.21.0_preact@10.29.2": {
+      "integrity": "sha512-GUJs/vYSHNM5HU0UwNADfKvDbNDQ7i6vciniCvtpRVMsXy+FOcaRHgRhqVcY/CiORqA6oMC8xK5JJ7Wvb1r1Sw==",
+      "dependencies": [
+        "preact"
+      ]
+    },
     "magic-string@0.30.21": {
       "integrity": "sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==",
       "dependencies": [
@@ -1470,6 +1477,7 @@
       "npm:@preact/signals@^2.9.0",
       "npm:@tailwindcss/vite@^4.1.12",
       "npm:@types/babel__core@^7.20.5",
+      "npm:lucide-preact@^1.21.0",
       "npm:preact@^10.29.1",
       "npm:tailwindcss@^4.1.10",
       "npm:vite@^7.1.3"

@@ -6,7 +6,7 @@ export function Services() {
   return (
     <div
       id="products"
-      class="w-full service-gradient pb-8 md:pb-12 lg:pb-16 min-h-[85vh]"
+      class="w-full hidden md:flex service-gradient pb-8 md:pb-12 lg:pb-16 min-h-[85vh]"
     >
       <hr />
       <div class="px-4 md:px-6 lg:px-8">

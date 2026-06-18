@@ -16,8 +16,10 @@ export default define.page(function Home(ctx) {
     <div>
       <Navbar />
       <Hero />
-      <Services />
-      <Clients />
+      {
+        /*<Services />
+      <Clients /> */
+      }
       <About />
       <Footer />
     </div>
