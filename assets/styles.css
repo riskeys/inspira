@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+body {
+	font-family: "Inter", "Poppins", sans-serif;
+}
+
+.fresh-gradient {
+  background-color: rgb(134, 239, 172);
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(219, 234, 254),
+    rgb(187, 247, 208),
+    rgb(254, 249, 195)
+  );
+}
+
+.hero-gradient {
+  /* background-color: rgb(134, 239, 172); */
+  background-image: linear-gradient(
+    to bottom,
+		#c65baa50,
+		#f6e9f3,
+		#fff
+  );
+}
+
+.service-gradient {
+  /* background-color: rgb(134, 239, 172); */
+  background-image: linear-gradient(
+    to bottom,
+		#fff,
+		#f6e9f3,
+		#c65baa90
+  );
+}
+
+/* #7b2c6f */
+/* #4a1e4d */
+/* #c65baa */
+/* #f6e9f3 */
+/* #2e2e2e */
