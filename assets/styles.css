@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-	font-family: "Inter", "Poppins", sans-serif;
+	font-family: "Plus Jakarta Sans", "Inter", "Poppins", sans-serif;
 }
 
 .fresh-gradient {
@@ -34,8 +34,49 @@ body {
   );
 }
 
-/* #7b2c6f */
-/* #4a1e4d */
-/* #c65baa */
-/* #f6e9f3 */
-/* #2e2e2e */
+.text-c-w { color: #fff }
+.text-c-b { color: #2e2e2e }
+.text-c-1 { color: #7b2c6f }
+.text-c-2 { color: #4a1e4d }
+.text-c-3 { color: #c65baa }
+.text-c-4 { color: #f6e9f3 }
+.text-c-5 { color: #2e2e2e }
+.text-c-6 { color: #a53860 }
+
+.text-hov-w:hover { color: #fff }
+.text-hov-b:hover { color: #2e2e2e }
+.text-hov-1:hover { color: #7b2c6f }
+.text-hov-2:hover { color: #4a1e4d }
+.text-hov-3:hover { color: #c65baa }
+.text-hov-4:hover { color: #f6e9f3 }
+.text-hov-5:hover { color: #2e2e2e }
+.text-hov-6:hover { color: #a53860 }
+
+.bg-c-w { background-color: #fff }
+.bg-c-b { background-color: #2e2e2e }
+.bg-c-t { background-color: transparent }
+.bg-c-1 { background-color: #7b2c6f }
+.bg-c-2 { background-color: #4a1e4d }
+.bg-c-3 { background-color: #c65baa }
+.bg-c-4 { background-color: #f6e9f3 }
+.bg-c-5 { background-color: #2e2e2e }
+.bg-c-6 { background-color: #a53860 }
+
+.bg-hov-w:hover { background-color: #fff }
+.bg-hov-b:hover { background-color: #2e2e2e }
+.bg-hov-t:hover { background-color: transparent }
+.bg-hov-1:hover { background-color: #7b2c6f }
+.bg-hov-2:hover { background-color: #4a1e4d }
+.bg-hov-3:hover { background-color: #c65baa }
+.bg-hov-4:hover { background-color: #f6e9f3 }
+.bg-hov-5:hover { background-color: #2e2e2e }
+.bg-hov-6:hover { background-color: #a53860 }
+
+.border-c-w { border-color: #fff }
+.border-c-b { border-color: #2e2e2e }
+.border-c-t { border-color: transparent }
+.border-c-1 { border-color: #7b2c6f }
+.border-c-2 { border-color: #4a1e4d }
+.border-c-3 { border-color: #c65baa }
+.border-c-4 { border-color: #f6e9f3 }
+.border-c-5 { border-color: #2e2e2e }
