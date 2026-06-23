@@ -18,11 +18,11 @@ function AboutLaptop() {
           <div class="h-1 w-16 rounded-full bg-c-1"></div>
         </div>
         <div class="flex flex-col justify-evenly text-c-b">
-          <div class="text-xl/relaxed md:font-semibold mb-4 ">
+          <div class="text-lg/relaxed md:font-normal mb-4 ">
             Biro Psikologi Inspira merupakan biro konsultasi dan pengembangan
             SDM yang aktif sejak tahun 2012.
           </div>
-          <div class="text-xl/relaxed md:font-semibold mb-4 ">
+          <div class="text-lg/relaxed md:font-normal mb-4 ">
             Inspira melayani berbagai bidang terapan seperti bidang pendidikan
             maupun industri organisasi, didukung oleh tenaga ahli profesional
             yang berpengalaman.
