@@ -38,7 +38,7 @@ function AboutLaptop() {
 
 function AboutMobile() {
   return (
-    <div class="flex md:hidden flex-col items-center justify-start min-h-[70vh] py-6 gap-6 hero-gradient">
+    <div class="flex md:hidden flex-col items-center justify-start min-h-screen md:min-h-[70vh] py-36 md:py-6 gap-6 hero-gradient">
       <div class="flex flex-col justify-around text-c-1 w-4/5 mx-auto text-justify">
         <div class="text-3xl font-bold text-center">
           Tentang Inspira

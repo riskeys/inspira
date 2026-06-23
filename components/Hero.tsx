@@ -54,7 +54,7 @@ export function Hero() {
             id="hero-s1-buttons"
             class="flex flex-row justify-start gap-2 md:gap-10 mt-4 md:mt-0"
           >
-            <HeroButton className="hidden md:block border border-c-w text-black bg-c-w bg-hov-t text-hov-w">
+            <HeroButton className="hidden md:flex border border-c-w text-black bg-c-w bg-hov-t text-hov-w">
               Daftar Konsultasi <ArrowRight className="hidden md:block" />
             </HeroButton>
             <HeroButton
@@ -88,9 +88,11 @@ function HeroButton(
   },
 ) {
   const buttonRegisterMobileClass = cn(
-    "px-4 py-2 rounded-2xl flex flex-row items-center gap-2 text-xs font-semibold transition cursor-pointer",
+    "px-4 py-2 rounded-2xl flex flex-row items-center gap-2 text-xs font-normal transition cursor-pointer",
   );
-  const buttonRegisterDesktopClass = cn("md:px-6 md:gap-2 md:py-3 md:text-lg");
+  const buttonRegisterDesktopClass = cn(
+    "md:px-6 md:gap-4 md:py-2 md:text-base md:font-medium",
+  );
 
   return (
     <a

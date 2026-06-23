@@ -43,7 +43,7 @@ function FooterMobile({ children }: { children: JSX.Element | JSX.Element[] }) {
 
 function ContactUs() {
   return (
-    <div class="flex flex-col gap-2 md:gap-4 w-96 md:w-auto mx-20 md:mx-0 md:h-[40vh] items-start">
+    <div class="flex flex-col gap-2 md:gap-4 w-full md:w-auto px-6 md:px-0 md:mx-0 md:h-[40vh] items-start">
       <div class="text-2xl mb-4 font-bold text-c-2">
         Hubungi Kami
         <div class="mt-4 flex justify-start">
@@ -71,7 +71,7 @@ function ContactUs() {
 
 function Services() {
   return (
-    <div class="flex flex-col gap-2 w-96 md:w-auto mx-20 md:mx-0 md:h-[40vh] items-start">
+    <div class="flex flex-col gap-2 w-full md:w-auto mx-20 px-6 md:px-0 md:mx-0 md:h-[40vh] items-start">
       <div class="text-2xl mb-4 font-bold text-c-2">
         Layanan Kami
         <div class="mt-4 flex justify-start">
@@ -96,7 +96,7 @@ function Services() {
 
 function Company() {
   return (
-    <div class="flex flex-col w-96 mx-auto md:mx-0 md:max-w-96 gap-4 items-start">
+    <div class="flex flex-col w-full mx-auto px-6 md:px-0 md:mx-0 md:max-w-96 gap-4 items-start">
       <div class="text-4xl mb-4 font-bold text-c-2">
         Inspira
       </div>
